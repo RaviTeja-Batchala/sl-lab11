@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Calculator SL Lab</title>
+ <style>
+body {
+ font-family: Calibri, Noto Sans, DejaVu Sans;
+ font-size: 14px;
+}
+.fg {
+ max-width: 1500px;
+ max-height: 1500px;
+ margin: auto;
+ background: #d0f8f3;
+ padding: 10px 10px 10px 10px;
+ border-radius: 3px;
+}
+.calc {
+ background-color: #ebdb9c;
+ padding: 10px 10px 10px 10px;
+ border-radius: 3px;
+ max-width: 200px;
+ margin: auto;
+}
+.calc-disp {
+ overflow-x: hidden;
+ padding: 5px 5px 5px 5px;
+ border:1px solid #727272;
+ border-radius: 2px;
+ min-height: 20px;
+ max-width: 100%;
+ background: #FFFEF3;
+ margin: 2px 2px 20px 2px;
+}
+.button {
+ min-width: 20px;
+ min-height: 20px;
+ border-radius: 2px;
+ text-align: center;
+ font-weight: bold;
+ padding: 5px 5px 5px 5px;
+ color: white;
+ background-color: #e0665b;
+ border: none;
+ width: 100%;
+}
+.button:hover {
+ background-color: #cc3e4c;
+}
+.button:active {
+ background-color: #6B5B95;
+}
+.res {
+ min-width: 30px;
+ min-height: 30px;
+ margin-bottom: 10px;
+ border-radius: 2px;
+ text-align: center;
+ font-weight: bold;
+ padding: 5px 5px 5px 5px;
+ color: white;
+ background-color: #535353;
+ border: 1px solid black;
+ width: 100%;
+ box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+<div class="fg">
+<h1 align="center">Calculator</h1>
+<p align="center">
+<b><u>Enter numbers and choose operator.</u></b>
+</p>
+<br />
+<form target="" method="post">
+<table class="calc" align="center">
+ <tr align="center">
+ <td colspan="4"><div class="res">{{RESULT}}</div></td>
+ </tr>
+ <tr>
+ <td colspan="2"><input type="text" name="a" value="{{VALUE1}}"
+class="calc-disp"></input></td>
+ <td colspan="2"><input type="text" name="b" value="{{VALUE2}}"
+class="calc-disp"></input></td>
+ </tr>
+ <tr class="pad">
+ <td><input type="submit" name="oper" value="+" class="button" /></td>
+ <td><input type="submit" name="oper" value="-" class="button" /></td>
+ <td><input type="submit" name="oper" value="*" class="button" /></td>
+ <td><input type="submit" name="oper" value="/" class="button" /></td>
+ </tr>
+</table>
+</form>
+</body>
+</html>
